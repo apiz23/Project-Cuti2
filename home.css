@@ -1,0 +1,75 @@
+html,body{
+    height: 100%;
+}
+
+body{
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(to right, #f0ebf0, #dacbde, #c1adcd, #a690bf, #8775b1);
+}
+
+.navbar{
+    margin: 0px 0px 10px 0px;
+    padding: 10px 10px;
+}
+
+.navbar a{
+    text-transform: uppercase;
+    font-family: Bebas Neue;
+    font-size: 30px;
+}
+
+#logo{
+    margin: 0px 15px;
+    height: 40px;
+    width: 35px;
+}
+
+.collapse li{
+    margin: 0px 10px;
+}
+
+.container-fluid{
+    margin: 50px 0;
+}
+
+.card img{
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.container-fluid .row .card{
+    margin: 10px 0px;
+}
+
+#title, #title sup{
+    margin: 50px 0;
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0px 4px 10px rgba(179, 147, 211, 0.8);
+    background-image: conic-gradient(#6c3ee9, #8b4d23, #af6ba6);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: slidein 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+@keyframes slidein {
+    from {
+      transform: translateX(-100%);
+    }
+    
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+#title{
+    letter-spacing: 2px;
+    line-height: 1.5;
+}

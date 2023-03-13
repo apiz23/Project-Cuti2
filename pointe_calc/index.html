@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia|Bebas Neue|Allerta Stencil|Boogaloo">
+    <link rel="stylesheet" href="style.css  ">
+    <link rel="shortcut icon" href="../img/favicon_io/favicon-16x16.png" type="image/x-icon">
+    <title>Calculator Pointer</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary justify-content-center align-items-center>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../home.html">
+                <img src="../img/uthm favicon/apple-touch-icon.png" id="logo" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Project Cuti<sup>2</sup>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="../home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../graph/index.html">Graph</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="https://github.com/apiz23">Github</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="https://www.instagram.com/apizuddin_2/?hl=en">Instagram</a>
+                            </li>
+                            <li>
+                                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hafizu_2" data-unique-id="hafizu_2" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > <section> <a target="_blank" href="https://www.tiktok.com/@hafizu_2?refer=creator_embed">@hafizu_2</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <h1>Calculator Pointer</h1>
+
+        <div class="container-lg">
+            <h3>Total :</h3>
+            <h3 id="totalSum"></h3><br>
+            <h3>Count Subject:</h3>
+            <h3 id="count">0</h3>
+            
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="input-group mb-3 w-75 p-3">
+                        <span class="input-group-text w-25" id="inputGroup-sizing-default">CPA</span>
+                        <input type="number" step="0.01" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cpa" id="cpa">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="input-group mb-3 w-75 p-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Cumulative Credit</span>
+                        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cCredit" id="cCredit">
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="input-group mb-3 w-75 p-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Credit</span>
+                        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="credit" name="credit" >
+                    </div>
+                </div>
+    
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <div class="input-group mb-3 w-75 p-3">
+                        <span class="input-group-text" id="basic-addon1">Grade</span>
+                        <select class="form-select w-25" aria-label="Default select example" name="grade" id="grade">
+                            <option selected>Choose Grade</option>
+                            <option value="1">A+</option>
+                            <option value="2">A</option>
+                            <option value="3">A-</option>
+                            <option value="4">B+</option>
+                            <option value="5">B</option>
+                            <option value="6">B-</option>
+                            <option value="7">C+</option>
+                            <option value="8">C</option>
+                            <option value="9">C-</option>
+                            <option value="10">D</option>
+                            <option value="11">E</option>
+                            <option value="12">F</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container-btn d-flex justify-content-center text-align-center">
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" id="submit"  class="btn btn-outline-primary" onclick="calculate()">Send</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="resultBtn" data-bs-toggle="modal" data-bs-target="#resultModal" class="btn btn-outline-success" onclick="resultOutput()">Result</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="reloadBtn" class="btn btn-outline-danger" onClick="window.location.reload()">Reset</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="videoBtn" data-bs-toggle="modal" data-bs-target="#videoModal" class="btn btn-outline-info">Tutorial</button>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center">Tutorial</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" id="videobody">
+                            <video controls src="video/tutor.mp4"></video>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" id="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center">Result</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h3 id="result"></h3><br>
+                            <h3 id="cCpa"></h3>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+</body>
+</html>
