@@ -73,3 +73,8 @@ body{
     letter-spacing: 2px;
     line-height: 1.5;
 }
+
+p{
+    font-size: 25px;
+    font-family: Boogaloo;
+}

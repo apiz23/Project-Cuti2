@@ -1,5 +1,5 @@
 html,body{
-    height: 100%;
+    height: 110%;
 }
 
 body{
@@ -39,16 +39,30 @@ img{
 }
 
 .container-fluid{
-    margin-top: 50px;
+    margin-top: 50px 0px;
 }
 
-.container-sm{
-    padding: 50px 0;
+.content{
+    padding: 30px;
+    margin: 10px 0px;
 }
 
 .input-group span,select,input,button{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
+
+
+
+#inpRow{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.input-group, button{
+    margin: 10px 0;
+}
+
 
 #graph {
     background-color: #ffffff;
@@ -58,11 +72,8 @@ img{
     width: 220px;
 }
 
-#inputRow{
-    margin: 20px 100px 20px 120px;
-}
-
-h1, h1{
+#title{
+    margin: 50px 0px;
     font-size: 70px;
     font-weight: 600;
     text-transform: uppercase;
